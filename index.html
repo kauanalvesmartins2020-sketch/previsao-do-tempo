@@ -1,28 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <title>previsão do tempo</title>
+</head>
+<body>
 
-    <title>Previsão do tempo</title>
-  </head>
-  <body>
-    <main>
-      <input type="text" placeholder="digite uma cidade" />
-      <button>buscar</button>
+  <main id="container"> <!--parte onde estão todas as informações-->
+    <form id="search"> 
+    <i class="fa-solid fa-location-dot"></i>
+      <input type="search" name="name_city" id="name_city" placeholder="digite a cidade">
+      <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <!---->
+    <div id="weather" class="show">
+      <h1 id="title">Brasilândia de Minas</h1>
+      <div id="infos">
+        <div id="temp">
+          <i style="font-size: 50px;" class="fa-solid fa-cloud-moon"></i>
 
-      <h1>tempo em São Paulo</h1>
-      <p>25°</p>
-      <span class="material-symbols-outlined">cloud</span>
-      <p>nublado</p>
-      <p>umidade:80%</p>
-    </main>
+          <!-- <br><br> -->
 
-    <script src="js/script.js"></script>
-  </body>
+          <div id="temp_value">
+            32 C°
+          </div>
+
+          <div id="temp_description">
+            Ensolarado
+          </div>
+        </div>
+          <!---->
+          <div id="other_infos">
+
+            <div class="info">
+              <i id="temp_max_icon" class="fa-solid fa-temperature-high"></i>
+              <div>
+                <h2>temp. max</h2>
+                <p id="temp_max">40 C°</p>
+              </div>
+            </div>
+              <!---->
+              <div class="info">
+              <i id="temp_min_icon" class="fa-solid fa-temperature-low"></i>
+              <div>
+                <h2>temp. min</h2>
+                <p id="temp_min">40 C°</p>
+              </div>
+              </div>
+              <!---->
+              <div class="info">
+              <i id="humidity_icon" class="fa-solid fa-droplet"></i>
+              <div>
+                <h2>humidade</h2>
+                <p id="humidity">80%</p>
+              </div>
+              </div>
+              <!---->
+              <div class="info">
+              <i id="wind_icon" class="fa-solid fa-wind"></i>
+              <div>
+                <h2>Vento</h2>
+                <p id="wind">26 km/h</p>
+              </div>
+              </div>
+              <!---->
+            </div>
+        </div>
+      </div>
+      <div id="alert"></div>
+    </div>
+  </main>
+  <script src="js/script.js"></script>
+</body>
 </html>
